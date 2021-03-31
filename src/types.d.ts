@@ -2,7 +2,7 @@ export type RootState = {
 	days: Day[]
 }
 
-type SleepType =
+type SleepQuality =
 	'Restful' |
 	'Fitful' |
 	'Unknown'
@@ -16,7 +16,7 @@ type MoodValue =
 
 export type Day = {
 	sleep: number
-	sleepType: SleepType
+	sleepQuality: SleepQuality
 
 	morning: number
 	morningCheckin: MoodValue
