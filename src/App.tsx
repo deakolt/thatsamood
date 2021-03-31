@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useSelector, Provider } from 'react-redux'
+
+import { getDaysSelector } from './selectors'
+import { Day } from './types'
+import { DayRow } from './components/DayRow'
+import { DayForm } from './components/DayForm'
+
+
 import './App.css';
 
+
 function App() {
+  const days: Day[] = useSelector(getDaysSelector)
+
+  // const renderDays = () => {
+  //   return days.map(day => {
+  //     return <DayRow />
+  //   })
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <DayForm />
+  )
 }
 
 export default App;
