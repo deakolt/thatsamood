@@ -33,31 +33,52 @@ export const DayForm = () => {
 					<option value="Fitful">Fitful</option>
 					<option value="Unknown">Unknownl</option>
 				</select></td>
-				<td><input
-					type="number"
-					value={morningMood}
-					// onChange={e => setMorningMood(e.target.value)}
-				/></td>
+				<td>
+					<select
+						value={morningMood}
+						onChange={e => setMorningMood(parseInt(e.target.value) as MoodValue )}
+					>
+						<option value="-1">-1</option>
+						<option value="-0.5">-0.5</option>
+						<option value="0">0</option>
+						<option value="0.5">0.5</option>
+						<option value="1">1</option>
+					</select>
+				</td>
 				<td><input
 					type="string"
 					value={morningCheckin}
 					onChange={e => setMorningCheckin(e.target.value)}
 				/></td>
-				<td><input
-					type="number"
-					value={afternoonMood}
-					// onChange={e => setAfternoonMood(e.target.value)}
-				/></td>
+				<td>
+					<select
+						value={afternoonMood}
+						onChange={e => setAfternoonMood(parseInt(e.target.value) as MoodValue )}
+					>
+						<option value="-1">-1</option>
+						<option value="-0.5">-0.5</option>
+						<option value="0">0</option>
+						<option value="0.5">0.5</option>
+						<option value="1">1</option>
+					</select>
+				</td>
 				<td><input
 					type="string"
 					value={afternoonCheckin}
 					onChange={e => setAfternoonCheckin(e.target.value)}
 				/></td>
-				<td><input
-					type="number"
-					value={eveningMood}
-					// onChange={e => setEveningMood(e.target.value)}
-				/></td>
+				<td>
+					<select
+						value={eveningMood}
+						onChange={e => setEveningMood(parseInt(e.target.value) as MoodValue )}
+					>
+						<option value="-1">-1</option>
+						<option value="-0.5">-0.5</option>
+						<option value="0">0</option>
+						<option value="0.5">0.5</option>
+						<option value="1">1</option>
+					</select>
+				</td>
 				<td><input
 					type="string"
 					value={eveningCheckin}
