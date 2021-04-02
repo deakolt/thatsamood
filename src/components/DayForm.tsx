@@ -18,8 +18,22 @@ export const DayForm = () => {
 
 	return (
 			<tr className="day-form"
-				onBlur={() => {{
+				onBlur={(e) => {{
+					e.preventDefault()
 					console.log('blurred')
+					upsertDay({
+					sleep,
+					sleepQuality,
+					morningMood,
+					morningCheckin,
+					afternoonMood,
+					afternoonCheckin,
+					eveningMood,
+					eveningCheckin
+				})}}}
+				onClick={(e) => {{
+					e.preventDefault()
+
 					upsertDay({
 					sleep,
 					sleepQuality,
@@ -74,6 +88,19 @@ export const DayForm = () => {
 					value={eveningCheckin}
 					onChange={e => setEveningCheckin(e.target.value)}
 				/></td>
+				<button value="hahaha" 				onClick={(e) => {{
+					e.preventDefault()
+
+					upsertDay({
+					sleep,
+					sleepQuality,
+					morningMood,
+					morningCheckin,
+					afternoonMood,
+					afternoonCheckin,
+					eveningMood,
+					eveningCheckin
+				})}}}/>
 			</tr>
 	)
 }
