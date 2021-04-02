@@ -20,7 +20,7 @@ export const MoodChart = () => {
 				<th>Evening Mood</th>
 				<th>Evening Mood Notes</th>
 			</tr>
-			{days.map(day => <DayRow day={day} />)}
+			{days.map(day => <DayRow day={day} key={JSON.stringify(day)} />)}
 		  	<DayForm />
 	  	</table>
 	)
