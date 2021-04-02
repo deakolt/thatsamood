@@ -1,14 +1,6 @@
-import { Day } from './types'
+import { createAction } from '@reduxjs/toolkit'
 
-export const ADD_DAY = 'ADD_DAY'
-export const REMOVE_DAY = 'REMOVE_DAY'
+import { Day } from '../types'
 
-export type Action =
-	{
-		type: typeof ADD_DAY
-		payload: Day
-	} |
-	{
-		type: typeof REMOVE_DAY
-		payload: Day
-	}
+
+export const addDay = createAction<Day>('ADD_DAY')

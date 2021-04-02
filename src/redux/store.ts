@@ -1,7 +1,12 @@
-import { rootReducer } from './rootReducer'
-
-import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { logger } from 'redux-logger'
 
-export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logger)))
+import { reducer } from './reducer'
+
+
+const middleware = [...getDefaultMiddleware(), logger]
+
+export const store = configureStore({
+	reducer: reducer,
+	middleware
+})

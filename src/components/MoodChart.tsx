@@ -1,6 +1,6 @@
 import { useSelector, Provider } from 'react-redux'
 
-import { getDaysSelector } from '../selectors'
+import { getDaysSelector } from '../redux/selectors'
 import { Day } from '../types'
 import { DayRow } from './DayRow'
 import { DayForm } from './DayForm'

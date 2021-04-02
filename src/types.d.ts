@@ -18,12 +18,12 @@ export type Day = {
 	sleep: number
 	sleepQuality: SleepQuality
 
-	morning: number
-	morningCheckin: MoodValue
+	morning: MoodValue
+	morningCheckin: string
 
-	afternoon: number
-	afternoonCheckin: MoodValue
+	afternoon: MoodValue
+	afternoonCheckin: string
 
-	evening: number
-	eveningCheckin: MoodValue
+	evening: MoodValue
+	eveningCheckin: string
 }
