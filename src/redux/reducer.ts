@@ -19,6 +19,7 @@ const initialState: RootState = {
 
 export const reducer = createReducer(initialState, (builder) => {
 	builder.addCase(upsertDay, (state, action) => {
+		console.log('we hit the reducer', action.payload)
 		state.days.push(action.payload)
 	})
 })
