@@ -8,11 +8,11 @@ export const DayRow = (props: DayRowProps) => {
 	const {
 		sleep,
 		sleepQuality,
-		morning,
+		morningMood,
 		morningCheckin,
-		afternoon,
+		afternoonMood,
 		afternoonCheckin,
-		evening,
+		eveningMood,
 		eveningCheckin
 	} = props.day
 
@@ -20,11 +20,11 @@ export const DayRow = (props: DayRowProps) => {
 		<tr>
 			<td>{sleep}</td>
 			<td>{sleepQuality}</td>
-			<td>{morning}</td>
+			<td>{morningMood}</td>
 			<td>{morningCheckin}</td>
-			<td>{afternoon}</td>
+			<td>{afternoonMood}</td>
 			<td>{afternoonCheckin}</td>
-			<td>{evening}</td>
+			<td>{eveningMood}</td>
 			<td>{eveningCheckin}</td>
 		</tr>
 	)

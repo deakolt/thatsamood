@@ -1,24 +1,24 @@
 import { createReducer } from '@reduxjs/toolkit'
 
 import { RootState } from '../types'
-import { addDay } from './actions'
+import { upsertDay } from './actions'
 
 const initialState: RootState = {
 	days: [{
 		sleep: 8,
 		sleepQuality: 'Restful',
-		morning: 0,
+		morningMood: 0,
 		morningCheckin: 'fine',
-		afternoon: -1,
+		afternoonMood: -1,
 		afternoonCheckin: 'hangry',
-		evening: 1,
+		eveningMood: 1,
 		eveningCheckin: 'yoga'
 
 	}]
 }
 
 export const reducer = createReducer(initialState, (builder) => {
-	builder.addCase(addDay, (state, action) => {
+	builder.addCase(upsertDay, (state, action) => {
 		state.days.push(action.payload)
 	})
 })
