@@ -17,34 +17,7 @@ export const DayForm = () => {
 	const [eveningCheckin, setEveningCheckin] = useState<string>('')
 
 	return (
-			<tr className="day-form"
-				onBlur={(e) => {{
-					e.preventDefault()
-					console.log('blurred')
-					upsertDay({
-					sleep,
-					sleepQuality,
-					morningMood,
-					morningCheckin,
-					afternoonMood,
-					afternoonCheckin,
-					eveningMood,
-					eveningCheckin
-				})}}}
-				onClick={(e) => {{
-					e.preventDefault()
-
-					upsertDay({
-					sleep,
-					sleepQuality,
-					morningMood,
-					morningCheckin,
-					afternoonMood,
-					afternoonCheckin,
-					eveningMood,
-					eveningCheckin
-				})}}}
-			>
+			<tr>
 				<td><input
 					type="number"
 					value={sleep}
@@ -90,7 +63,7 @@ export const DayForm = () => {
 				/></td>
 				<button value="hahaha" 				onClick={(e) => {{
 					e.preventDefault()
-
+					console.log('clicked')
 					upsertDay({
 					sleep,
 					sleepQuality,
