@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 import { SleepQuality, MoodValue } from '../types'
 import { upsertDay } from '../redux/actions'
@@ -16,6 +17,7 @@ export const DayForm = () => {
 	const [eveningMood, setEveningMood] = useState<MoodValue>(0)
 	const [eveningCheckin, setEveningCheckin] = useState<string>('')
 
+	const dispatch = useDispatch()
 	return (
 			<tr>
 				<td><input
@@ -64,16 +66,17 @@ export const DayForm = () => {
 				<button value="hahaha" 				onClick={(e) => {{
 					e.preventDefault()
 					console.log('clicked')
-					upsertDay({
-					sleep,
-					sleepQuality,
-					morningMood,
-					morningCheckin,
-					afternoonMood,
-					afternoonCheckin,
-					eveningMood,
-					eveningCheckin
-				})}}}/>
+					dispatch(upsertDay({
+						sleep,
+						sleepQuality,
+						morningMood,
+						morningCheckin,
+						afternoonMood,
+						afternoonCheckin,
+						eveningMood,
+						eveningCheckin
+					}))
+				}}}/>
 			</tr>
 	)
 }
