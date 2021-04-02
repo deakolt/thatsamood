@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Day } from './types'
 import { MoodChart } from './components/MoodChart'
 
 import './App.css';
